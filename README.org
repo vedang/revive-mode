@@ -1,0 +1,11 @@
+* revive-mode
+Revive mode is handy if you wish to save and restore your emacs buffers and frames. Simply put this somewhere in your load path and add the following to your .emacs:
+
+    (require 'revive-mode-config)
+
+** Easy is better.
+I find these keybindings and settings helpful when actually using revive-mode. Add them to your .emacs if you wish:
+
+    (define-key ctl-x-map "S" 'emacs-save-layout)
+    (define-key ctl-x-map "F" 'emacs-load-layout)
+    (add-hook 'kill-emacs-hook 'emacs-save-layout)
